@@ -1,0 +1,81 @@
+/*
+Theme Name: Piranha Child Theme
+Theme URI: http: //piranhadesigns.com/
+Description: This is a Piranha child theme for Salient
+Author: Piranha Designs
+Author URI: http: //piranhadesigns.com/
+Template: salient
+Version: 0.1
+*/
+
+/**** HEADER  ***/
+
+body { 
+	-webkit-font-smoothing: auto;
+}
+
+/***  CONTENT  ***/
+
+
+/***  FOOTER  ***/
+
+
+
+/******************** MEDIA Q ******************/
+
+@media only screen and (min-width: 1000px) {
+
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+
+}
+
+
+
+
+
+/** IOS FORM STYLE FIX **/
+@media only screen and (max-width: 1366px) { textarea, input.text, input[type="text"], input[type="email"], input[type="button"], input[type="submit"] { -webkit-appearance: none; -moz-appearance: none; appearance: none; } }
+
+
+@media only screen and (max-width: 1000px) and (min-width: 690px) {
+
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 1px) {
+
+}
+
+
+
+@media only screen and (max-width: 1070px) {
+
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+
+
+}
+
+@media only screen and (max-width: 690px) {
+
+
+}
+
+@media only screen and (max-width: 479px) {
+
+
+
+}
+
+@media only screen and (max-width: 320px) {
+
+
+}
+
+
