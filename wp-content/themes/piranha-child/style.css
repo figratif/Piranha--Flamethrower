@@ -8,6 +8,13 @@ Template: salient
 Version: 0.1
 */
 
+/*////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	Use the '#child' ID added to body for easy override of complex theme selectors where necessary
+
+////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
 /**** HEADER  ***/
 
 body { 
@@ -16,8 +23,102 @@ body {
 
 /***  CONTENT  ***/
 
+#child .swiper-btn-light .button a {
+	color: #f31e50;
+}
 
-/***  FOOTER  ***/
+/* GLOBAL CONTENT
+//////////////////////////////////////////////////*/
+
+.row .col.section-title {
+	border: none;
+}
+
+.row .col.section-title {
+	padding-bottom: 0;
+}
+
+.text-block-heading-left .nectar-split-heading {
+	text-align: center;
+}
+
+
+/* CONTENT PANELS
+//////////////////////////////////////////////////*/
+
+.panel-intro .nectar-split-heading .panel-intro-heading {
+	color: #ff1053;
+    background: linear-gradient(to top right, #fc5900 ,#e10e2c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    line-height: 1.5;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+
+#child .panel-intro-icon {
+    max-width: 45px !important;
+}
+
+.panel-intro-side {
+	text-align: center;
+}
+
+
+/* ALTERNATING SECTIONS
+//////////////////////////////////////////////////*/
+
+.column-image-bg {
+    background-repeat: no-repeat;
+}
+
+#child .split-col-image-left .column-image-bg {
+    background-position: right bottom -100px;
+    background-size: contain;
+}
+
+#child .split-col-image-right .column-image-bg {
+    background-position: left bottom -100px;
+    background-size: contain;
+}
+
+.split-col-image-left .nectar-shape-divider-wrap::before,
+.split-col-image-right .nectar-shape-divider-wrap::before  {
+    border-bottom: 52px solid #eee;
+    bottom: 0px;
+	content: '';
+    height: 0;
+    position: absolute;
+    width: 0;
+}
+
+.split-col-image-left .nectar-shape-divider-wrap::before  {
+    border-left: 108vw solid transparent;
+    right: 0;
+}
+
+.split-col-image-right .nectar-shape-divider-wrap::before  {
+    border-right: 108vw solid transparent;
+    left: 0;
+}
+
+#child .split-col-last,
+#child .split-col-last .wpb_column  {
+    margin-bottom: 0;
+}
+
+.split-col-text .vc_custom_heading {
+	color: #444;
+}
+
+
+/* STATIC GALLERY SECTION
+//////////////////////////////////////////////////*/
+
+.static-gallery .row-bg-overlay {
+	background-color: #ff5028;
+	background: radial-gradient(ellipse at center, #d80f56 0%, #ff5028 100%) !important;
+}
 
 
 
@@ -25,11 +126,43 @@ body {
 
 @media only screen and (min-width: 1000px) {
 
+	/* ALTERNATING SECTIONS
+	//////////////////////////////////////////////////*/
+
+	#child .split-col-image-right .split-col-text {
+		text-align: right;
+	}
+
+	#child .split-col-image-left .split-col-text .divider-small-border {
+		margin-left: -50px;
+	}
+
+	#child .split-col-image-right .split-col-text .divider-small-border {
+		margin-right: -50px;
+	}
+
+	/* GLOBAL CONTENT
+	//////////////////////////////////////////////////*/
+
+	.text-block-heading-left .nectar-split-heading {
+		text-align: right;
+	}
+
 
 }
 
 @media only screen and (min-width: 1200px) {
 
+	/* ALTERNATING SECTIONS
+	//////////////////////////////////////////////////*/
+
+	#child .split-col-image-left .column-image-bg {
+	    background-position: right bottom -140px;
+	}
+
+	#child .split-col-image-right .column-image-bg {
+	    background-position: left bottom -140px;
+	}
 
 }
 
@@ -42,6 +175,11 @@ body {
 
 
 @media only screen and (max-width: 1000px) and (min-width: 690px) {
+
+	body#child {
+		font-size: 16px;
+		line-height: 1.5;
+	}
 
 }
 
@@ -58,12 +196,34 @@ body {
 
 @media only screen and (max-width: 1000px) {
 
+	/* BANNER SLIDER
+	//////////////////////////////////////////////////*/
 
+	#child .nectar-slider-wrap[data-fullscreen="true"] .swiper-slide .button a {
+		font-size: 14px !important;
+		padding: 12px 20px;
+	}
+
+	#child .swiper-slide[data-x-pos="right"] .content {
+		left: 0;
+		right: auto;
+		width: 100%;
+	}
+
+
+	/* ALTERNATING SECTIONS
+	//////////////////////////////////////////////////*/
+
+	.split-col-image-left .nectar-shape-divider-wrap::before,
+	.split-col-image-right .nectar-shape-divider-wrap::before  {
+		display: none;
+	}
 
 }
 
 @media only screen and (max-width: 690px) {
 
+	
 
 }
 
